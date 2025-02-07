@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Đánh Giá Nhân Viên</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { width: 50%; margin: auto; }
+        .form-section { margin-bottom: 20px; }
+        label { display: block; margin-top: 10px; }
+        input, select, textarea { width: 100%; padding: 8px; margin-top: 5px; }
+        .submit-btn { background-color: #007BFF; color: white; padding: 10px 20px; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Hệ Thống Đánh Giá Cán Bộ Quản Lý Ẩn Danh</h2>
+        
+        <div class="form-section">
+            <label for="employee">Tên cán bộ:</label>
+            <select id="employee" onchange="loadEmployeeDetails()"></select>
+        </div>
+
+        <div class="form-section">
+            <label>Năm sinh:</label>
+            <span id="dob"></span>
+
+            <label>Giới tính:</label>
+            <span id="gender"></span>
+
+            <label>Đơn vị:</label>
+            <span id="department"></span>
+
+            <label>Chức vụ:</label>
+            <span id="position"></span>
+
+            <label>Trạng thái:</label>
+            <span id="status"></span>
+        </div>
+
+        <div class="form-section">
+            <label>1. Trình độ chuyên môn, nghiệp vụ:</label>
+            <input type="radio" name="q1" value="Tốt"> Tốt
+            <input type="radio" name="q1" value="Khá"> Khá
+            <input type="radio" name="q1" value="Trung bình"> Trung bình
+            <input type="radio" name="q1" value="Yếu"> Yếu
+        </div>
+
+        <div class="form-section">
+            <label>2. Khả năng quản lý, điều hành công việc:</label>
+            <input type="radio" name="q2" value="Tốt"> Tốt
+            <input type="radio" name="q2" value="Khá"> Khá
+            <input type="radio" name="q2" value="Trung bình"> Trung bình
+            <input type="radio" name="q2" value="Yếu"> Yếu
+        </div>
+
+        <div class="form-section">
+            <label>* Góp ý khác:</label>
+            <textarea id="comments"></textarea>
+        </div>
+
+        <button class="submit-btn" onclick="submitEvaluation()">Gửi Đánh Giá</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
