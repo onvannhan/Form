@@ -50,7 +50,7 @@ function submitEvaluation() {
     };
 
     // Gọi API Google Apps Script để lưu dữ liệu (sẽ hướng dẫn ở bước tiếp theo)
-    fetch('YOUR_GOOGLE_APPS_SCRIPT_URL', {
+    fetch('https://script.google.com/macros/s/AKfycbwBJN86NRcdIuH-POre7ZWsdh94lEtWd1MikYYKG_dFHqn1xpNPH-DXWbKKgykM-DLB/exec', {
         method: 'POST',
         body: JSON.stringify(data),
         headers: { 'Content-Type': 'application/json' }
